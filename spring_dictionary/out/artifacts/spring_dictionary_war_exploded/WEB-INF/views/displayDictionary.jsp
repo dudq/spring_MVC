@@ -13,11 +13,11 @@
 <body>
 <h1>Dictionary</h1>
 <form method="get" action="/translate">
-<h3>English</h3>
-<input name="eng" type="text" value="${eng}">
-<h3>Vietnamese</h3>
-<input name="viet" type="text" value="${viet}">
-<input type="submit" value="Translate">
+    <h3>English</h3>
+    <input name="eng" type="text" value="${eng}">
+    <h3>Vietnamese</h3>
+    <input name="viet" type="text" value="${viet}">
+    <input type="submit" value="Translate">
 </form>
 </body>
 </html>
