@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+// must research about anotation lombox
 public class DictionaryServlet {
     @Autowired
-    DictionaryIpm dictionary;
+    public DictionaryIpm dictionary;
 
     @GetMapping("/dictionary")
     public String displayDictionary() {
@@ -19,6 +20,8 @@ public class DictionaryServlet {
 
     @GetMapping("/translate")
     public String translate(@RequestParam String eng, Model model) {
+        /*Handle exception here
+        * validate eng*/
         String result = dictionary.translate(eng);
         model.addAttribute("eng", eng);
         model.addAttribute("viet", result);

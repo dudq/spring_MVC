@@ -3,10 +3,11 @@ package Sevice;
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class DictionaryIpm implements Dictionary {
-    static Map<String, String> dictionary = new HashMap<>();
+    public static Map<String, String> dictionary = new HashMap<>();
 
-    static {
+    public static {
         dictionary.put("hello", "xin chao");
         dictionary.put("book", "sach");
         dictionary.put("cat", "meo");
@@ -15,7 +16,7 @@ public class DictionaryIpm implements Dictionary {
 
     @Override
     public String translate(String eng) {
-        String result = dictionary.get(eng);
-        return result;
+        /*need handle exception here*/
+        return dictionary.get(eng);
     }
 }
